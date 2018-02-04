@@ -26,7 +26,7 @@ You should now have all the plugin files under
 
 ## Usage
 
-See online [documentation](https://www.twelvetone.tv/docs/admin/pages/developer-tools/grav-plugins/grav-admin-media-actions-plugin)
+See online [documentation](https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-admin-media-actions-plugin)
 
 ## Credits
 

@@ -1,0 +1,29 @@
+<!--A generic form dialog that contains a loading indicator, submit button, and message -->
+<div class="remodal" data-remodal-id="modal-admin-media-actions" data-remodal-options="hashTracking: false">
+    <form method="post" onsubmit='return false;'>
+        {% for field in fields %}
+        {% if field.type %}
+        {% set value = data.value(field.name) %}
+        <div class="block block-{{field.type}}">
+            {% include ["forms/fields/#{field.type}/#{field.type}.html.twig", 'forms/fields/text/text.html.twig'] %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <div class="block page-media-info hidden">
+            <div class="form-field grid">{{ "Page Info" }}</div>
+        </div>
+
+        <div class="block non-page-media-info hidden">
+            <div class="form-field grid">{{ "Non-Page Info" }}</div>
+        </div>
+
+        <div class="button-bar">
+            <div class="loading">
+                {{ "Moving" }}... <i class="fa fa-spinner fa-spin"></i>
+            </div>
+
+            <button class="button primary" style="visibility: hidden">{{ "PLUGIN_ADMIN.CONTINUE"|tu }}</button>
+        </div>
+    </form>
+</div>

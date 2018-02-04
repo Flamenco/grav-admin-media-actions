@@ -26,7 +26,6 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
-use Grav\Common\Utils;
 
 /**
  * Class AdminMediaActionsPlugin
@@ -51,11 +50,7 @@ class AdminMediaActionsPlugin extends Plugin
 
     public function buildBaseUrl()
     {
-        //TODO remove hardcoded path
-        $ret = rtrim($this->grav['uri']->rootUrl(true), '/') . '/' . trim($this->getPath(), '/');
-        if (Utils::contains($ret, "twelvetone")) {
-            $ret = preg_replace("#^http:#", "https:", $ret);
-        }
+        $ret = rtrim($this->grav['uri']->rootUrl(false), '/') . '/' . trim($this->getPath(), '/');
         return $ret;
     }
 

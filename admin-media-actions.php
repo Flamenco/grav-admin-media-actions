@@ -185,10 +185,15 @@ class MediaActionsController
 {
     public $actions = [];
 
+    /**
+     * @param $actionId A unique id for the action.  Must be a valid Javascript function name.
+     * @param $caption The caption for the action.  Used for the tooltip.
+     * @param $icon The font-awesome icon name.  The 'fa-' prefix is optional.
+     * @param $handler A handler for the action. (page, mediaName, payload) => object.
+     */
     function addAction($actionId, $caption, $icon, $handler)
     {
-        //TODO add item to UI
-        $this->actions [$actionId] = [
+        $this->actions[$actionId] = [
             'handler' => $handler,
             'caption' => $caption,
             'icon' => $icon,

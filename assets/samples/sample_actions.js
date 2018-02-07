@@ -21,24 +21,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-// Sample actions
 
 function onMediaAction_SampleAction1(actionId, mediaName, mediaElement) {
-    console.log(`${actionId} was selected`);
+    console.log(`Media action ${actionId} was selected.`);
+    alert(`Media action ${actionId} was selected.`);
     submitMediaAction(actionId, mediaName, `${actionId} was selected`, function (result) {
         console.log(result);
     });
 }
 
 function onMediaAction_SampleAction2(actionId, mediaName, mediaElement) {
-    console.log(`${actionId} was selected`);
+    console.log(`Media action ${actionId} was selected.`);
+    alert(`Media action ${actionId} was selected.`);
     submitMediaAction(actionId, mediaName, `${actionId} was selected`, function (result) {
         console.log(result);
     });
 }
 
 function onMediaAction_SampleAction3(actionId, mediaName, mediaElement) {
-    console.log(`${actionId} was selected`);
+    console.log(`Media action ${actionId} was selected.`);
+    alert(`Media action ${actionId} was selected.`);
     submitMediaAction(actionId, mediaName, `${actionId} was selected`, function (result) {
         console.log(result);
     });

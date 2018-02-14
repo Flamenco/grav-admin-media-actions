@@ -187,12 +187,27 @@ class MediaActionsController
 
     /**
      * @param $actionId A unique id for the action.  Must be a valid Javascript function name.
+     * This can also be an array containing keys of the same parameter names.
+     *
      * @param $caption The caption for the action.  Used for the tooltip.
      * @param $icon The font-awesome icon name.  The 'fa-' prefix is optional.
      * @param $handler A handler for the action. (page, mediaName, payload) => object.
      */
-    function addAction($actionId, $caption, $icon, $handler)
+    function addAction($actionId, $caption = null, $icon = null, $handler = null)
     {
+        if (is_array($actionId)) {
+            if (isset($actionId['caption'])) {
+                $caption = $actionId['caption'];
+            }
+            if (isset($actionId['icon'])) {
+                $icon = $actionId['icon'];
+            }
+            if (isset($actionId['handler'])) {
+                $handler = $actionId['handler'];
+            }
+            // do this last...
+            $actionId = $actionId['actionId'];
+        }
         $this->actions[$actionId] = [
             'handler' => $handler,
             'caption' => $caption,

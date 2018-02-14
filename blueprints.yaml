@@ -23,7 +23,7 @@
 #
 
 name: Admin Media Actions
-version: 1.0.1
+version: 1.0.2
 description: A plugin that extends Grav with an API for adding actions to media items in the page media bin.
 icon: plug
 author:
@@ -31,7 +31,7 @@ author:
   email: info@twelvetone.tv
 homepage: https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-admin-media-actions-plugin
 keywords: grav, plugin, admin, media, action
-bugs: https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-admin-media-actions-plugin
+bugs: https://github.com/Flamenco/grav-admin-media-actions/issues
 docs: https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-admin-media-actions-plugin
 license: MIT
 

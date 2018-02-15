@@ -29,9 +29,9 @@ span[data-dz-name] {
     color: #0082ba;
 }
 
-.dropzone .dz-preview:hover .dz-rename {
-    display: block;
-}
+/*.dropzone .dz-preview:hover .dz-rename {*/
+    /*display: block;*/
+/*}*/
 
 .dropzone .dz-preview:hover .dz-media-action {
     display: flex;
@@ -46,6 +46,7 @@ span[data-dz-name] {
     background: #e1e1e1;
     justify-content: center;
     align-items: center;
+    border-radius: 2px;
 }
 
 .dz-media-action i {

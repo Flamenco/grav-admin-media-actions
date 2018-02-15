@@ -62,6 +62,7 @@ function submitMediaAction(actionId, mediaName, payload = "", callback = null, m
 setInterval(function () {
     const size = 25; // The action icon size
     const maxRows = 5;
+    const colMargin = 2;
 
     $('.dz-preview').each(function (i, dz) {
         if (!dz._actions) {
@@ -82,8 +83,15 @@ setInterval(function () {
                 }
                 const ele = document.createElement('a');
                 ele.className = 'dz-media-action';
-                ele.style.top = (Math.floor(actionsIndex % maxRows) * 25 - (Math.floor(actionsIndex % maxRows)) - 1) + 'px';
-                ele.style.right = -((1 + Math.floor((actionsIndex) / maxRows)) * 25) + 'px';
+                ele.style.top = (Math.floor(actionsIndex % maxRows) * size - (Math.floor(actionsIndex % maxRows)) - 1) + 'px';
+                let right;
+                const col = Math.floor(actionsIndex / maxRows);
+                if (col === 0) {
+                    right = -size;
+                } else {
+                    right = -((1 + Math.floor((actionsIndex) / maxRows)) * size) - (col * colMargin);
+                }
+                ele.style.right = right + 'px';
                 ele.href = 'javascript:undefined;';
                 ele.title = item.caption;
                 ele.innerText = "";//item.caption;
@@ -95,8 +103,16 @@ setInterval(function () {
                 ele.appendChild(i);
                 i.className = 'fa fa-fw ' + faIcon;
                 ele.addEventListener('click', () => _onMediaAction(item.actionId, nameEle.text(), dz));
+
+                //Invisible div to maintain hover when the mouseover is on the column margin
+                const ele2 = document.createElement('div');
+                ele2.className = 'dz-media-action';
+                ele2.style.background = 'transparent';
+                ele2.style.right = (right + colMargin) + "px";
+                ele2.style.top = ele.style.top;
+                $(ele2).insertBefore(ele);
             });
-            dz.style.marginRight = 15 + Math.floor(actionsIndex / maxRows) * 25 + "px";
+            dz.style.marginRight = 15 + Math.floor(actionsIndex / maxRows) * (size + colMargin) + "px";
         }
     });
 }, 1000);

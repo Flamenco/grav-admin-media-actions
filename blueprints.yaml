@@ -23,8 +23,8 @@
 #
 
 name: Admin Media Actions
-version: 1.0.2
-description: A plugin that extends Grav with an API for adding actions to media items in the page media bin.
+version: 1.0.3
+description: A plugin that extends Grav with an API for adding actions to media items in the page media bin.  This plugin is required by other plugins that add media actions.
 icon: plug
 author:
   name: TwelveTone LLC
@@ -52,6 +52,7 @@ form:
         0: Disabled
       validate:
         type: bool
+        
     show_samples:
       type: toggle
       label: Show sample actions

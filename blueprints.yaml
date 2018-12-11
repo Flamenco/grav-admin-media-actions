@@ -23,7 +23,7 @@
 #
 
 name: Admin Media Actions
-version: 1.0.3
+version: 1.0.4
 description: A plugin that extends Grav with an API for adding actions to media items in the page media bin.  This plugin is required by other plugins that add media actions.
 icon: plug
 author:

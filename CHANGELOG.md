@@ -1,3 +1,9 @@
+# v1.0.4
+## 2/15/2018
+
+1. [](#new)
+    * Update styles for Grav Admin v1.7.
+
 # v1.0.3
 ## 2/15/2018
 

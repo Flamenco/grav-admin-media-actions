@@ -30,7 +30,7 @@ span[data-dz-name] {
 }
 
 /*.dropzone .dz-preview:hover .dz-rename {*/
-    /*display: block;*/
+/*display: block;*/
 /*}*/
 
 .dropzone .dz-preview:hover .dz-media-action {
@@ -47,6 +47,10 @@ span[data-dz-name] {
     justify-content: center;
     align-items: center;
     border-radius: 2px;
+}
+
+body.ga-theme-17x .dz-media-action {
+    background: #f2f2f2;
 }
 
 .dz-media-action i {
